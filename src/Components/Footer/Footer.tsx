@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="bg-dark text-white text-center py-2 fixed-bottom">
+    <footer className="text-secondary text-center py-2 fixed-bottom">
       <div className="container-fluid">
         <p className="mb-0">
           &copy; {new Date().getFullYear()} Gestor de Presupuestos. Todos los
