@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFile,
   faFileInvoice,
   faFileInvoiceDollar,
   faFlag,

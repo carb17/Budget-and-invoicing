@@ -12,7 +12,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/Menu" element={<Menu />} />
-        <Route path="/Usuarios" element={<Usuarios />} />
       </Routes>
     </Router>
   );
