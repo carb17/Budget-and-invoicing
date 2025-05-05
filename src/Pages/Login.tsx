@@ -1,5 +1,5 @@
-import { LoginLogo } from "../Components/Galery/Galery";
-import { Footer } from "../Components/Footer/Footer";
+import { LoginLogo } from "../Components/Galery/Galery.tsx";
+import { Footer } from "../Components/Footer/Footer.tsx";
 export function Login() {
   return (
     <>

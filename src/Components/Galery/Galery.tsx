@@ -15,8 +15,8 @@ export function IconBTO() {
     <img
       src="/Static/Img/BTO.jpeg"
       alt="Logo BTO"
-      width={40}
-      height={40}
+      width={50}
+      height={50}
       className="d-inline-block align-text-top rounded-circle"
     />
   );
