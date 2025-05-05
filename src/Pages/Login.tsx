@@ -6,7 +6,7 @@ export function Login() {
       <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
         <div className="text-center">
           <LoginLogo />
-          <h1 className="text-center mb-3 mt-3 fs-3">
+          <h1 className="text-center mb-3 mt-3 fs-4">
             Sistema de Gestión de Presupuestos
           </h1>
           <form>
