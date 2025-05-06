@@ -3,7 +3,7 @@ import { Footer } from "../../Components/Footer/Footer.tsx";
 import { LoginProps } from "../../Props/Props.tsx";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
-import axios from "axios";
+import { InstanciaAxios } from "../../Services/InstanciaAxios.tsx";
 import { useNavigate } from "react-router-dom";
 
 export function Login() {
@@ -14,15 +14,12 @@ export function Login() {
 
   const handleLogin = async (event: React.FormEvent) => {
     event.preventDefault();
-
+    setMensaje("");
     try {
-      const response = await axios.post<LoginProps>(
-        "https://api-users-5dni.onrender.com/users/login",
-        {
-          email: email,
-          password: password,
-        }
-      );
+      const response = await InstanciaAxios.post<LoginProps>("/users/login", {
+        email: email.trim(),
+        password: password,
+      });
 
       if (response.data && response.data.token) {
         localStorage.setItem("token", response.data.token);
@@ -33,7 +30,19 @@ export function Login() {
       }
     } catch (error: any) {
       console.error("Error al iniciar sesión:", error);
-      setMensaje("Error desconocido.");
+      if (error.response) {
+        if (error.response.status === 401) {
+          setMensaje("Correo o contraseña incorrectos.");
+        } else if (error.response.status === 500) {
+          setMensaje("Error interno del servidor.");
+        } else {
+          setMensaje(`Error: ${error.response.data?.message || "desconocido"}`);
+        }
+      } else if (error.request) {
+        setMensaje("No se pudo conectar con el servidor.");
+      } else {
+        setMensaje("Ocurrió un error inesperado.");
+      }
     }
   };
 

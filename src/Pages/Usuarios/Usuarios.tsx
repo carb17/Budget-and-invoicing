@@ -36,8 +36,10 @@ export function Usuarios() {
     <>
       <Navbar></Navbar>
       <OpcionesMenu />
-
       <div className="m-3 p-3">
+        <div className="d-flex justify-content-end mb-3">
+          <Button onClick={() => navigate("/Usuario")}>Agregar usuario</Button>
+        </div>
         {!error && (
           <table className="table w-50 mx-auto">
             <thead>
@@ -63,11 +65,6 @@ export function Usuarios() {
                       }
                     >
                       <FontAwesomeIcon icon={faEdit} />
-                    </Button>
-                  </td>
-                  <td>
-                    <Button onClick={() => navigate("/Usuario")}>
-                      Agregar usuario
                     </Button>
                   </td>
                 </tr>

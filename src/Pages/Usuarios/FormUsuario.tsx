@@ -52,7 +52,9 @@ export function FormUsuario() {
       <Navbar></Navbar>
       <OpcionesMenu></OpcionesMenu>
       <div className="container mt-4">
-        <h2>{id ? "Editar Usuario" : "Agregar Usuario"}</h2>
+        <h2 className="text-center mb-3">
+          {id ? "Editar usuario" : "Agregar usuario"}
+        </h2>
         <form onSubmit={handleSubmit} className="w-50 mx-auto">
           <div className="mb-3">
             <label className="form-label">Correo:</label>
