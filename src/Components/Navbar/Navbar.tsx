@@ -9,7 +9,7 @@ export function Navbar() {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    navigate("/login", {
+    navigate("/", {
       state: { mensaje: "Sesión cerrada correctamente ✅" },
     });
   };

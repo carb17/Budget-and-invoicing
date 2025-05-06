@@ -33,6 +33,11 @@ export function Usuarios() {
       <Navbar></Navbar>
       <OpcionesMenu />
       <div className="m-3 p-3">
+        {error && (
+          <div className="alert alert-danger text-center w-50 mx-auto">
+            {error}
+          </div>
+        )}
         <table className="table w-50 mx-auto">
           <thead>
             <tr>
