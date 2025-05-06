@@ -68,7 +68,9 @@ export function Login() {
                 required
               />
             </div>
-            <Button type="submit">Ingresar</Button>
+            <Button type="submit" className="w-100">
+              Ingresar
+            </Button>
           </form>
           {mensaje && <div>{mensaje}</div>}
         </div>

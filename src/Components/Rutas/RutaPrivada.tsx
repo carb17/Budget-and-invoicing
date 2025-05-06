@@ -5,7 +5,7 @@ export function RutaPrivada({ children }: RutaPrivadaProps) {
   const token = localStorage.getItem("token");
 
   if (!token) {
-    return <Navigate to="/Login" />;
+    return <Navigate to="/" />;
   }
 
   return children;

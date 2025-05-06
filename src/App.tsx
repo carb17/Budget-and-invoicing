@@ -20,7 +20,14 @@ function App() {
             </RutaPrivada>
           }
         />
-        <Route path="/Usuarios" element={<Usuarios />} />
+        <Route
+          path="/Usuarios"
+          element={
+            <RutaPrivada>
+              <Usuarios />
+            </RutaPrivada>
+          }
+        />
       </Routes>
     </Router>
   );
