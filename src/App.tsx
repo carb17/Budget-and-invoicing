@@ -2,10 +2,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { Login } from "./Pages/Login/Login.tsx";
-import { PaginaPrincipal } from "./Pages/Index/PaginaPrincipal.tsx";
-import { Usuarios } from "./Pages/Usuarios/Usuarios.tsx";
-import { RutaPrivada } from "./Components/Rutas/RutaPrivada.tsx";
+import { Login } from "./Pages/Login/Login";
+import { PaginaPrincipal } from "./Pages/Index/PaginaPrincipal";
+import { Usuarios } from "./Pages/Usuarios/Usuarios";
+import { RutaPrivada } from "./Components/Rutas/RutaPrivada";
+import { FormUsuario } from "./Pages/Usuarios/FormUsuario";
 
 function App() {
   return (
@@ -25,6 +26,22 @@ function App() {
           element={
             <RutaPrivada>
               <Usuarios />
+            </RutaPrivada>
+          }
+        />
+        <Route
+          path="/Usuario"
+          element={
+            <RutaPrivada>
+              <FormUsuario />
+            </RutaPrivada>
+          }
+        />
+        <Route
+          path="/Usuario/:id"
+          element={
+            <RutaPrivada>
+              <FormUsuario />
             </RutaPrivada>
           }
         />

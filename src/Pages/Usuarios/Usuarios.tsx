@@ -2,9 +2,10 @@ import { Navbar } from "../../Components/Navbar/Navbar";
 import { OpcionesMenu } from "../../Components/Menu/OpcionesMenu";
 import { Footer } from "../../Components/Footer/Footer";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import { InstanciaAxios } from "../../Services/InstanciaAxios";
 import { UsuarioProps } from "../../Props/Props";
 import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
 
@@ -12,10 +13,10 @@ export function Usuarios() {
   const [users, setUsuarios] = useState<UsuarioProps[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>("");
+  const navigate = useNavigate();
 
   useEffect(() => {
-    axios
-      .get<UsuarioProps[]>("https://api-users-5dni.onrender.com/users/users")
+    InstanciaAxios.get<UsuarioProps[]>("/users/users")
       .then((res) => {
         setUsuarios(res.data);
         setLoading(false);
@@ -35,6 +36,7 @@ export function Usuarios() {
     <>
       <Navbar></Navbar>
       <OpcionesMenu />
+
       <div className="m-3 p-3">
         {!error && (
           <table className="table w-50 mx-auto">
@@ -46,13 +48,26 @@ export function Usuarios() {
               </tr>
             </thead>
             <tbody>
-              {users.map((users, index) => (
+              {users.map((user, index) => (
                 <tr key={index}>
-                  <td>{users.email}</td>
-                  <td>{users.role}</td>
+                  <td>{user.email}</td>
+                  <td>{user.role}</td>
                   <td>
-                    <Button type="submit">
+                    <Button
+                      type="button"
+                      className="btn btn-warning"
+                      onClick={() =>
+                        navigate(`/usuario/${user._id}`, {
+                          state: { usuario: user },
+                        })
+                      }
+                    >
                       <FontAwesomeIcon icon={faEdit} />
+                    </Button>
+                  </td>
+                  <td>
+                    <Button onClick={() => navigate("/Usuario")}>
+                      Agregar usuario
                     </Button>
                   </td>
                 </tr>
