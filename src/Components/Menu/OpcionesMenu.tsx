@@ -17,7 +17,7 @@ export function OpcionesMenu() {
           <Link
             className="nav-link active fs-4 mt-3"
             aria-current="page"
-            to="/Menu"
+            to="/PaginaPrincipal"
           >
             Menú
           </Link>
