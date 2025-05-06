@@ -6,7 +6,7 @@ import axios from "axios";
 import { UsuarioProps } from "../Props/Props";
 import { Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faEdit } from "@fortawesome/free-solid-svg-icons";
 
 export function Usuarios() {
   const [users, setUsuarios] = useState<UsuarioProps[]>([]);
