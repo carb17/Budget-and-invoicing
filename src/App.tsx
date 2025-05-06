@@ -2,9 +2,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { Login } from "./Pages/Login.tsx";
-import { PaginaPrincipal } from "./Pages/PaginaPrincipal.tsx";
-import { Usuarios } from "./Pages/Usuarios.tsx";
+import { Login } from "./Pages/Login/Login.tsx";
+import { PaginaPrincipal } from "./Pages/Index/PaginaPrincipal.tsx";
+import { Usuarios } from "./Pages/Usuarios/Usuarios.tsx";
 import { RutaPrivada } from "./Components/Rutas/RutaPrivada.tsx";
 
 function App() {

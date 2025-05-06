@@ -1,9 +1,9 @@
-import { Navbar } from "../Components/Navbar/Navbar";
-import { OpcionesMenu } from "../Components/Menu/OpcionesMenu";
-import { Footer } from "../Components/Footer/Footer";
+import { Navbar } from "../../Components/Navbar/Navbar";
+import { OpcionesMenu } from "../../Components/Menu/OpcionesMenu";
+import { Footer } from "../../Components/Footer/Footer";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { UsuarioProps } from "../Props/Props";
+import { UsuarioProps } from "../../Props/Props";
 import { Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";

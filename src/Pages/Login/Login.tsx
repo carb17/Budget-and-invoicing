@@ -1,6 +1,6 @@
-import { LoginLogo } from "../Components/Galery/Galery.tsx";
-import { Footer } from "../Components/Footer/Footer.tsx";
-import { LoginProps } from "../Props/Props.tsx";
+import { LoginLogo } from "../../Components/Galery/Galery.tsx";
+import { Footer } from "../../Components/Footer/Footer.tsx";
+import { LoginProps } from "../../Props/Props.tsx";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
 import axios from "axios";
