@@ -30,7 +30,7 @@ function App() {
           }
         />
         <Route
-          path="/Usuario"
+          path="/Usuario/"
           element={
             <RutaPrivada>
               <FormUsuario />
@@ -38,7 +38,7 @@ function App() {
           }
         />
         <Route
-          path="/Usuario/:id"
+          path="/Usuario/:_id"
           element={
             <RutaPrivada>
               <FormUsuario />
