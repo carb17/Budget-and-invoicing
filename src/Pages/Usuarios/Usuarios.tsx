@@ -1,7 +1,7 @@
 import { Navbar } from "../../Components/Navbar/Navbar";
 import { OpcionesMenu } from "../../Components/Menu/OpcionesMenu";
 import { Footer } from "../../Components/Footer/Footer";
-import { useUsuarios } from "../../Hooks/useUsuarios";
+import { useUsuarios } from "../../Hooks/Usuarios/useUsuarios";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

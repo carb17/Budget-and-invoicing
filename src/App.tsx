@@ -7,6 +7,8 @@ import { PaginaPrincipal } from "./Pages/Index/PaginaPrincipal";
 import { Usuarios } from "./Pages/Usuarios/Usuarios";
 import { RutaPrivada } from "./Components/Rutas/RutaPrivada";
 import { FormUsuario } from "./Pages/Usuarios/FormUsuario";
+import { Clientes } from "./Pages/Clientes/Clientes";
+import { FormCliente } from "./Pages/Clientes/FormCliente";
 
 function App() {
   return (
@@ -42,6 +44,30 @@ function App() {
           element={
             <RutaPrivada>
               <FormUsuario />
+            </RutaPrivada>
+          }
+        />
+        <Route
+          path="/Clientes"
+          element={
+            <RutaPrivada>
+              <Clientes />
+            </RutaPrivada>
+          }
+        />
+        <Route
+          path="/Cliente/"
+          element={
+            <RutaPrivada>
+              <FormCliente />
+            </RutaPrivada>
+          }
+        />
+        <Route
+          path="/Cliente/:_id"
+          element={
+            <RutaPrivada>
+              <FormCliente />
             </RutaPrivada>
           }
         />

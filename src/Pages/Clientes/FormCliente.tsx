@@ -2,23 +2,21 @@ import { Navbar } from "../../Components/Navbar/Navbar";
 import { OpcionesMenu } from "../../Components/Menu/OpcionesMenu";
 import { Footer } from "../../Components/Footer/Footer";
 import { useNavigate, useParams } from "react-router-dom";
-import { UsuarioForm } from "../../Components/Usuarios/UsuarioForm";
-import { useUsuario } from "../../Hooks/Usuarios/useUsuario";
+import { ClienteForm } from "../../Components/Clientes/ClienteForm";
+import { useCliente } from "../../Hooks/Clientes/useCliente";
 
-export function FormUsuario() {
+export function FormCliente() {
   const { _id } = useParams();
   const navigate = useNavigate();
-  const { user, guardarUsuario, loading } = useUsuario(_id);
+  const { client, guardarCliente, loading } = useCliente(_id);
 
   const handleSubmit = async (data: any) => {
     if (_id) {
-      console.log("ID recibido en FormUsuario:", _id);
-
-      await guardarUsuario(data);
+      await guardarCliente(data);
     } else {
-      await guardarUsuario(data);
+      await guardarCliente(data);
     }
-    navigate("/Usuarios");
+    navigate("/Clientes");
   };
 
   return (
@@ -27,12 +25,12 @@ export function FormUsuario() {
       <OpcionesMenu />
       <div className="container mt-4">
         <h2 className="text-center mb-3">
-          {_id ? "Editar usuario" : "Agregar usuario"}
+          {_id ? "Editar cliente" : "Agregar cliente"}
         </h2>
         {loading ? (
-          <div>Cargando usuario...</div>
+          <div>Cargando cliente...</div>
         ) : (
-          <UsuarioForm initialData={user} onSubmit={handleSubmit} />
+          <ClienteForm initialData={client} onSubmit={handleSubmit} />
         )}
       </div>
       <Footer />

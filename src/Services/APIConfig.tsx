@@ -6,7 +6,7 @@ export const USERS_API = `${API_BASE_URL}/users/users`;
 
 export const USERS_REGISTER_API = `${API_BASE_URL}/users/register`;
 
-export const cLIENT_API = `${API_BASE_URL}/clients/`;
+export const CLIENT_API = `${API_BASE_URL}/clients/`;
 
 export const CLIENTS_API = `${API_BASE_URL}/clients/clients`;
 
