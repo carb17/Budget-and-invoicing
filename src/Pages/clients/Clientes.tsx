@@ -1,7 +1,7 @@
-import { Navbar } from "../../Components/Navbar/Navbar";
-import { OpcionesMenu } from "../../Components/Menu/OpcionesMenu";
-import { Footer } from "../../Components/Footer/Footer";
-import { useClientes } from "../../Hooks/Clientes/useClientes";
+import { Navbar } from "../../components/layout/navbar/Navbar";
+import { OpcionesMenu } from "../../components/layout/menu/OpcionesMenu";
+import { Footer } from "../../components/layout/footer/Footer";
+import { useClientes } from "../../hooks/clients/useClientes";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

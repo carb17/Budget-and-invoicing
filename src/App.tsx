@@ -2,13 +2,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { Login } from "./Pages/Login/Login";
-import { PaginaPrincipal } from "./Pages/Index/PaginaPrincipal";
-import { Usuarios } from "./Pages/Usuarios/Usuarios";
-import { RutaPrivada } from "./Components/Rutas/RutaPrivada";
-import { FormUsuario } from "./Pages/Usuarios/FormUsuario";
-import { Clientes } from "./Pages/Clientes/Clientes";
-import { FormCliente } from "./Pages/Clientes/FormCliente";
+import { Login } from "./pages/login/Login";
+import { PaginaPrincipal } from "./pages/index/PaginaPrincipal";
+import { Usuarios } from "./pages/users/Usuarios";
+import { RutaPrivada } from "./components/routes/RutaPrivada";
+import { FormUsuario } from "./pages/users/FormUsuario";
+import { Clientes } from "./pages/clients/Clientes";
+import { FormCliente } from "./pages/clients/FormCliente";
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { InstanciaAxios } from "../../Services/InstanciaAxios";
-import { UsuarioProps } from "../../Props/UsuarioProps/UsuarioProps";
-import { USERS_API } from "../../Services/APIConfig";
+import { InstanciaAxios } from "../../services/InstanciaAxios";
+import { UsuarioProps } from "../../props/user props/UsuarioProps";
+import { USERS_API } from "../../services/APIConfig";
 
 export function useUsuarios() {
   const [users, setUsers] = useState<UsuarioProps[]>([]);

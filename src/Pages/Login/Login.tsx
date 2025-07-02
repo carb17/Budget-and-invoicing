@@ -1,8 +1,8 @@
-import { LoginLogo } from "../../Components/Galery/Galery.tsx";
-import { Footer } from "../../Components/Footer/Footer.tsx";
+import { LoginLogo } from "../../components/galery/Galery.tsx";
+import { Footer } from "../../components/layout/footer/Footer.tsx";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
-import { useLogin } from "../../Hooks/Usuarios/useLogin.tsx";
+import { useLogin } from "../../hooks/users/useLogin.tsx";
 
 export function Login() {
   const [email, setEmail] = useState("");

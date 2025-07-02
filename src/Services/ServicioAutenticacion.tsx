@@ -1,5 +1,5 @@
 import { InstanciaAxios } from "./InstanciaAxios";
-import { LoginProps } from "../Props/LoginProps/LoginProps";
+import { LoginProps } from "../props/login props/LoginProps";
 
 export const loginService = async (email: string, password: string) => {
   try {

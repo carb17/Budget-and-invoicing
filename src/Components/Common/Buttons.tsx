@@ -1,4 +1,4 @@
-import { ButtonProps } from "../../Props/ButtonPros/ButtonProps";
+import { ButtonProps } from "../../props/button props/ButtonProps";
 import { Link } from "react-router-dom";
 
 export const Button = ({

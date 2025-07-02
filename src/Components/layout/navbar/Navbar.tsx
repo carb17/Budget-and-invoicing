@@ -1,4 +1,4 @@
-import { IconBTO } from "../Galery/Galery.tsx";
+import { IconBTO } from "../../galery/Galery.tsx";
 import { Dropdown } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOut } from "@fortawesome/free-solid-svg-icons";

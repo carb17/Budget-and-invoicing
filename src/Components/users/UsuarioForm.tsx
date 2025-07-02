@@ -1,6 +1,6 @@
 import { Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
-import { UsuarioFormProps } from "../../Props/UsuarioProps/UsuarioProps";
+import { UsuarioFormProps } from "../../props/user props/UsuarioProps";
 
 export function UsuarioForm({ initialData, onSubmit }: UsuarioFormProps) {
   const [email, setEmail] = useState("");

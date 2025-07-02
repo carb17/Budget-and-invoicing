@@ -1,9 +1,9 @@
-import { Navbar } from "../../Components/Navbar/Navbar";
-import { OpcionesMenu } from "../../Components/Menu/OpcionesMenu";
-import { Footer } from "../../Components/Footer/Footer";
+import { Navbar } from "../../components/layout/navbar/Navbar";
+import { OpcionesMenu } from "../../components/layout/menu/OpcionesMenu";
+import { Footer } from "../../components/layout/footer/Footer";
 import { useNavigate, useParams } from "react-router-dom";
-import { UsuarioForm } from "../../Components/Usuarios/UsuarioForm";
-import { useUsuario } from "../../Hooks/Usuarios/useUsuario";
+import { UsuarioForm } from "../../components/users/UsuarioForm";
+import { useUsuario } from "../../hooks/users/useUsuario";
 
 export function FormUsuario() {
   const { _id } = useParams();

@@ -1,9 +1,9 @@
-import { Navbar } from "../../Components/Navbar/Navbar";
-import { OpcionesMenu } from "../../Components/Menu/OpcionesMenu";
-import { Footer } from "../../Components/Footer/Footer";
+import { Navbar } from "../../components/layout/navbar/Navbar";
+import { OpcionesMenu } from "../../components/layout/menu/OpcionesMenu";
+import { Footer } from "../../components/layout/footer/Footer";
 import { useNavigate, useParams } from "react-router-dom";
-import { ClienteForm } from "../../Components/Clientes/ClienteForm";
-import { useCliente } from "../../Hooks/Clientes/useCliente";
+import { ClienteForm } from "../../components/clients/ClienteForm";
+import { useCliente } from "../../hooks/clients/useCliente";
 
 export function FormCliente() {
   const { _id } = useParams();

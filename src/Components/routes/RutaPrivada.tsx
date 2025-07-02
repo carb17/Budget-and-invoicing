@@ -1,4 +1,4 @@
-import { RutaPrivadaProps } from "../../Props/RutaPrivadaProps/RutaPrivadaProps";
+import { RutaPrivadaProps } from "../../props/private route props/RutaPrivadaProps";
 import { Navigate } from "react-router-dom";
 
 export function RutaPrivada({ children }: RutaPrivadaProps) {

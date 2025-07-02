@@ -1,6 +1,6 @@
-import { Footer } from "../../Components/Footer/Footer.tsx";
-import { Navbar } from "../../Components/Navbar/Navbar.tsx";
-import { OpcionesMenu } from "../../Components/Menu/OpcionesMenu.tsx";
+import { Footer } from "../../components/layout/footer/Footer.tsx";
+import { Navbar } from "../../components/layout/navbar/Navbar.tsx";
+import { OpcionesMenu } from "../../components/layout/menu/OpcionesMenu.tsx";
 
 export function PaginaPrincipal() {
   return (

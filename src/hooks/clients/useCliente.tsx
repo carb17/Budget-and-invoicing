@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { InstanciaAxios } from "../../Services/InstanciaAxios";
-import { ClienteProps } from "../../Props/ClienteProps/ClienteProps";
-import { CLIENT_API, CLIENTS_REGISTER_API } from "../../Services/APIConfig";
+import { InstanciaAxios } from "../../services/InstanciaAxios";
+import { ClienteProps } from "../../props/client props/ClienteProps";
+import { CLIENT_API, CLIENTS_REGISTER_API } from "../../services/APIConfig";
 
 export function useCliente(_id: string | undefined) {
   const [client, setClient] = useState<ClienteProps | undefined>(undefined);

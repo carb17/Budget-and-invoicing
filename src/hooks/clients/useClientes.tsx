@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { InstanciaAxios } from "../../Services/InstanciaAxios";
-import { ClienteProps } from "../../Props/ClienteProps/ClienteProps";
-import { CLIENTS_API } from "../../Services/APIConfig";
+import { InstanciaAxios } from "../../services/InstanciaAxios";
+import { ClienteProps } from "../../props/client props/ClienteProps";
+import { CLIENTS_API } from "../../services/APIConfig";
 
 export function useClientes() {
   const [clients, setClients] = useState<ClienteProps[]>([]);

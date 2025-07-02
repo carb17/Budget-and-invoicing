@@ -1,6 +1,6 @@
 import { Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
-import { ClienteFormProps } from "../../Props/ClienteProps/ClienteProps";
+import { ClienteFormProps } from "../../props/client props/ClienteProps";
 
 export function ClienteForm({ initialData, onSubmit }: ClienteFormProps) {
   const [dni, setDNI] = useState("");
