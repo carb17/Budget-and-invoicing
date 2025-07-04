@@ -1,7 +1,7 @@
 export function LoginLogo() {
   return (
     <img
-      src="/Static/Img/BTO.jpeg"
+      src="/BTO.jpeg"
       alt="Logo BTO"
       width={200}
       height={200}
@@ -13,7 +13,7 @@ export function LoginLogo() {
 export function IconBTO() {
   return (
     <img
-      src="/Static/Img/BTO.jpeg"
+      src="/BTO.jpeg"
       alt="Logo BTO"
       width={50}
       height={50}
