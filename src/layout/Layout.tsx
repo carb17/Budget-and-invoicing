@@ -10,10 +10,8 @@ export function Layout({ children }: LayoutProps) {
       <Menu />
       <div className="main-content">
         <Navbar />
-        <div className="content-wrapper">
-          {children}
-          <Footer />
-        </div>
+        <div className="content-wrapper">{children}</div>
+        <Footer />
       </div>
     </div>
   );

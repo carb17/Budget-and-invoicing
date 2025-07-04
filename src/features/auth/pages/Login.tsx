@@ -28,8 +28,8 @@ export function Login() {
   };
 
   return (
-    <>
-      <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div className="d-flex flex-column min-vh-100 bg-light">
+      <main className="flex-grow-1 d-flex justify-content-center align-items-center">
         <div className="text-center">
           <LoginLogo />
           <h1 className="text-center mb-3 mt-3 fs-4">
@@ -62,12 +62,12 @@ export function Login() {
               type="submit"
               className="btn btn-primary w-100"
               text="Ingresar"
-            ></Button>
+            />
           </form>
           {mensaje && <div className="alert alert-info mt-3">{mensaje}</div>}
         </div>
-      </div>
-      <Footer></Footer>
-    </>
+      </main>
+      <Footer />
+    </div>
   );
 }
