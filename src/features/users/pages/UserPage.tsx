@@ -1,8 +1,11 @@
-import { Layout } from '../../../layout/pages/Layout';
-import { useUsers } from '../hooks/UseUsers';
-import { Button } from '../../../components/common/buttons/Buttons';
 import { useNavigate } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { Layout } from '../../../layout/pages/Layout';
+
+import { Button } from '../../../components/common/buttons/Buttons';
+
+import { useUsers } from '../hooks/UseUsers';
+
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 
 export function Users() {
@@ -28,15 +31,14 @@ export function Users() {
   return (
     <>
       <Layout>
-        <div className='m-3 p-3'>
-          <div className='d-flex justify-content-end mb-3'>
-            <Button
-              onClick={() => navigate('/User')}
-              text='Agregar usuario'
-              className='btn btn-primary'
-            ></Button>
-          </div>
-          <table className='table w-50 mx-auto'>
+        <div className='users'>
+          <Button
+            onClick={() => navigate('/User')}
+            text='Agregar usuario'
+            className='users__btn'
+          ></Button>
+          <div className='users__content'></div>
+          <table className='users__table'>
             <thead>
               <tr>
                 <th>Usuario</th>
@@ -52,8 +54,8 @@ export function Users() {
                   <td>
                     <Button
                       type='button'
-                      className='btn btn-warning'
-                      icon={<FontAwesomeIcon icon={faEdit} />}
+                      className='users__btn users__btn--edit'
+                      icon={faEdit}
                       onClick={() => {
                         navigate(`/User/${user._id}`, {
                           state: { user },

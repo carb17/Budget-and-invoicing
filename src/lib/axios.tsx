@@ -1,10 +1,9 @@
-import axios from "axios";
-import { API_BASE_URL } from "./apiConfig";
+import axios from 'axios';
 
-const token = localStorage.getItem("token");
+const token = localStorage.getItem('token');
 
 export const InstanciaAxios = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: import.meta.env.VITE_API_BASE_URL,
   headers: {
     Authorization: `Bearer ${token}`,
   },

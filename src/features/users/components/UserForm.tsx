@@ -1,5 +1,7 @@
-import { Button } from '../../../components/common/buttons/Buttons';
 import { useState, useEffect } from 'react';
+
+import { Button } from '../../../components/common/buttons/Buttons';
+
 import { UserFormProps } from '../types/types';
 
 export function UserForm({ initialData, onSubmit }: UserFormProps) {
@@ -26,32 +28,32 @@ export function UserForm({ initialData, onSubmit }: UserFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className='w-50 mx-auto'>
-      <div className='mb-3'>
-        <label className='form-label'>Correo:</label>
+    <form onSubmit={handleSubmit} className='users__form'>
+      <div className=''>
+        <label className='users__label'>Correo</label>
         <input
           type='email'
-          className='form-control'
+          className='users__input'
           value={email}
           required
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
-      <div className='mb-3'>
-        <label className='form-label'>Contraseña:</label>
+      <div className=''>
+        <label className='users__label'>Contraseña</label>
         <input
           type='password'
-          className='form-control'
+          className='users__input'
           value={password}
           required
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
-      <div className='mb-3'>
-        <label className='form-label'>Rol:</label>
+      <div className=''>
+        <label className='users__label'>Rol</label>
         <input
           type='text'
-          className='form-control'
+          className='users__input'
           value={role}
           required
           onChange={(e) => setRole(e.target.value)}
@@ -60,7 +62,7 @@ export function UserForm({ initialData, onSubmit }: UserFormProps) {
       <Button
         type='submit'
         text='Guardar'
-        className='btn btn-primary w-100'
+        className='users__btn users__btn--save'
       ></Button>
     </form>
   );

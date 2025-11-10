@@ -1,12 +1,11 @@
 export interface ClientProps {
   _id?: string;
-  dni: string;
   name: string;
   surname: string;
-  birth: string;
+  dni: number;
   address: string;
   phone_number: string;
-  email: string;
+  active: boolean;
 }
 
 export interface ClientFormProps {

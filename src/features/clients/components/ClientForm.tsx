@@ -1,115 +1,113 @@
-import { Button } from "../../../components/common/buttons/Buttons";
-import { useState, useEffect } from "react";
-import { ClientFormProps } from "../types/types";
+import { Button } from '../../../components/common/buttons/Buttons';
+import { useState, useEffect } from 'react';
+import { ClientFormProps } from '../types/types';
 
 export function ClientForm({ initialData, onSubmit }: ClientFormProps) {
-  const [dni, setDNI] = useState("");
-  const [name, setName] = useState("");
-  const [surname, setSurname] = useState("");
-  const [birth, setBirth] = useState("");
-  const [address, setAddress] = useState("");
-  const [phone_number, setPhone_number] = useState("");
-  const [email, setEmail] = useState("");
+  const [name, setName] = useState('');
+  const [surname, setSurname] = useState('');
+  const [dni, setDNI] = useState<number>(0);
+  const [address, setAddress] = useState('');
+  const [phone_number, setPhone_number] = useState('');
+  const [active, setActive] = useState<boolean>(false);
 
   useEffect(() => {
     if (initialData) {
-      setDNI(initialData.dni);
       setName(initialData.name);
       setSurname(initialData.surname);
-      setBirth(initialData.birth.split("T")[0]);
+      setDNI(initialData.dni);
       setAddress(initialData.address);
       setPhone_number(initialData.phone_number);
-      setEmail(initialData.email);
+      setActive(initialData.active);
     } else {
-      setDNI("");
-      setName("");
-      setSurname("");
-      setBirth("");
-      setAddress("");
-      setPhone_number("");
-      setEmail("");
+      setName('');
+      setSurname('');
+      setDNI(0);
+      setAddress('');
+      setPhone_number('');
+      setActive(false);
     }
   }, [initialData]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit({ dni, name, surname, birth, address, phone_number, email });
+    onSubmit({
+      name,
+      surname,
+      dni,
+      address,
+      phone_number,
+      active,
+    });
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-50 mx-auto">
-      <div className="mb-3">
-        <label className="form-label">DNI:</label>
+    <form onSubmit={handleSubmit} className='clients__form'>
+      <div className=''>
+        <label className='clients__label'>Nombre</label>
         <input
-          type="text"
-          className="form-control"
-          value={dni}
-          required
-          onChange={(e) => setDNI(e.target.value)}
-        />
-      </div>
-      <div className="mb-3">
-        <label className="form-label">Nombre:</label>
-        <input
-          type="text"
-          className="form-control"
+          type='text'
+          className='clients__input'
           value={name}
           required
           onChange={(e) => setName(e.target.value)}
         />
       </div>
-      <div className="mb-3">
-        <label className="form-label">Apellido:</label>
+      <div className=''>
+        <label className='clients__label'>Apellido</label>
         <input
-          type="text"
-          className="form-control"
+          type='text'
+          className='clients__input'
           value={surname}
           required
           onChange={(e) => setSurname(e.target.value)}
         />
       </div>
-      <div className="mb-3">
-        <label className="form-label">Fecha de nacimiento:</label>
+      <div className=''>
+        <label className='clients__label'>DNI</label>
         <input
-          type="date"
-          className="form-control"
-          value={birth}
-          onChange={(e) => setBirth(e.target.value)}
+          type='text'
+          className='clients__input'
+          value={dni}
+          required
+          onChange={(e) => setDNI(Number(e.target.value))}
         />
       </div>
-      <div className="mb-3">
-        <label className="form-label">Dirección:</label>
+      <div className=''>
+        <label className='clients__label'>Dirección</label>
         <input
-          type="text"
-          className="form-control"
+          type='text'
+          className='clients__input'
           value={address}
           onChange={(e) => setAddress(e.target.value)}
         />
       </div>
-      <div className="mb-3">
-        <label className="form-label">Número de teléfono:</label>
+      <div className=''>
+        <label className='clients__label'>Número de teléfono</label>
         <input
-          type="number"
-          className="form-control"
+          type='text'
+          className='clients__input'
           value={phone_number}
           onChange={(e) => setPhone_number(e.target.value)}
         />
       </div>
-      <div className="mb-3">
-        <label className="form-label">Correo:</label>
-        <input
-          type="email"
-          className="form-control"
-          value={email}
+      <div className=''>
+        <label className='clients__label'>Estado</label>
+        <select
+          className='clients__select'
+          value={String(active)}
+          onChange={(e) => setActive(e.target.value === 'true')}
           required
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        >
+          <option value=''>Seleccionar...</option>
+          <option value='true'>Activo</option>
+          <option value='false'>Inactivo</option>
+        </select>
       </div>
 
       <Button
-        type="submit"
-        className="btn btn-primary w-100"
-        text="Guardar"
+        type='submit'
+        className='clients__btn clients__btn--save'
+        text='Guardar'
       ></Button>
     </form>
   );

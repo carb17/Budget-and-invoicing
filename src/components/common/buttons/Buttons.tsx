@@ -1,11 +1,12 @@
-import { ButtonProps } from "./types";
-import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ButtonProps } from './types';
+import { Link } from 'react-router-dom';
 
 export const Button = ({
   text,
   link,
   onClick,
-  type = "button",
+  type = 'button',
   icon,
   className,
   children,
@@ -13,7 +14,7 @@ export const Button = ({
 }: ButtonProps) => {
   const content = (
     <>
-      {icon && <i className={`${icon} me-2`}></i>}
+      {icon && <FontAwesomeIcon icon={icon} className='me-2' />}
       {text}
       {children}
     </>
@@ -30,6 +31,6 @@ export const Button = ({
   );
 };
 
-export const ButtonSubmit = ({ text = "Submit" }: { text?: string }) => {
-  return <Button text={text} type="submit" />;
+export const ButtonSubmit = ({ text = 'Submit' }: { text?: string }) => {
+  return <Button text={text} type='submit' />;
 };

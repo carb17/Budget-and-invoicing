@@ -12,11 +12,16 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   return (
-    <>
+    <div className='layout'>
       <Header />
-      <Navbar />
-      <main>{children}</main>
+      <div className='layout__content'>
+        <nav>
+          <Navbar />
+        </nav>
+
+        <main className='main__content'>{children}</main>
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
