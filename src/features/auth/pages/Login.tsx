@@ -1,73 +1,68 @@
-import { LoginLogo } from "../../../components/galery/Galery.tsx";
-import { Footer } from "../../../layout/footer/Footer.tsx";
-import { Button } from "../../../components/common/buttons/Buttons.tsx";
-import { useState } from "react";
-import { useLogin } from "../hooks/UseLogin.tsx";
-import { fncSweetAlert } from "../../../utils/alerts.ts";
+import { Footer } from '../../../layout/pages/Footer.tsx';
+import { Button } from '../../../components/common/buttons/Buttons.tsx';
+import { useState } from 'react';
+import { useLogin } from '../hooks/UseLogin.tsx';
+import { fncSweetAlert } from '../../../utils/alerts.ts';
+
+import '../../styles/features.css';
 
 export function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const { handleLogin, mensaje } = useLogin();
 
   const onSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
-    fncSweetAlert("loading", "Comprobando los datos ingresados");
+    fncSweetAlert('loading', 'Comprobando los datos ingresados');
 
     try {
       await handleLogin(email, password);
-      fncSweetAlert("success", "Inicio de sesión exitoso");
+      fncSweetAlert('success', 'Inicio de sesión exitoso');
     } catch (error: any) {
       const mensajeError =
-        error.message || error.response?.data?.message || "Ocurrió un error";
-      fncSweetAlert("error", mensajeError);
+        error.message || error.response?.data?.message || 'Ocurrió un error';
+      fncSweetAlert('error', mensajeError);
     } finally {
-      fncSweetAlert("close", "Cerrando sesión...");
+      fncSweetAlert('close', 'Cerrando sesión...');
     }
   };
 
   return (
-    <div className="d-flex flex-column min-vh-100 bg-light">
-      <main className="flex-grow-1 d-flex justify-content-center align-items-center">
-        <div className="text-center">
-          <LoginLogo />
-          <h1 className="text-center mb-3 mt-3 fs-4">
-            Sistema de Gestión de Presupuestos
-          </h1>
-          <form onSubmit={onSubmit}>
-            <div className="mb-3">
-              <input
-                type="email"
-                className="form-control"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                id="InputEmail"
-                placeholder="Correo"
-                required
-              />
-            </div>
-            <div className="mb-3">
-              <input
-                type="password"
-                className="form-control"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                id="InputPassword"
-                placeholder="Contraseña"
-                required
-              />
-            </div>
-            <Button
-              type="submit"
-              className="btn btn-primary w-100"
-              text="Ingresar"
+    <div className='login'>
+      <div className='login__container'>
+        <img src='./BTO.jpeg' className='login__logo' />
+        <h1 className='login__title'>Sistema de Gestión de Presupuestos</h1>
+        <form onSubmit={onSubmit} className='login__form'>
+          <div className='login__field'>
+            <input
+              type='email'
+              className='login__input login__input--email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              id='InputEmail'
+              placeholder='Correo'
+              required
             />
-          </form>
-          {mensaje && <div className="alert alert-info mt-3">{mensaje}</div>}
-        </div>
-      </main>
-      <Footer />
+          </div>
+          <div className='login__field'>
+            <input
+              type='password'
+              className='login__input'
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              id='InputPassword'
+              placeholder='Contraseña'
+              required
+            />
+          </div>
+          <Button type='submit' className='login__btn' text='Ingresar' />
+        </form>
+        {mensaje && <div className=''>{mensaje}</div>}
+      </div>
+      <div className='login__footer'>
+        <Footer />
+      </div>
     </div>
   );
 }

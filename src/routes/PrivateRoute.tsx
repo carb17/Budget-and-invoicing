@@ -1,4 +1,4 @@
-import { RutaPrivadaProps } from "./types";
+import { RutaPrivadaProps } from "./types/types";
 import { Navigate } from "react-router-dom";
 
 export function RutaPrivada({ children }: RutaPrivadaProps) {

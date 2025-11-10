@@ -1,7 +1,7 @@
-import { Layout } from "../../../layout/Layout";
-import { useNavigate, useParams } from "react-router-dom";
-import { ClientForm } from "../components/ClientForm";
-import { useClient } from "../hooks/UseClient";
+import { Layout } from '../../../layout/pages/Layout';
+import { useNavigate, useParams } from 'react-router-dom';
+import { ClientForm } from '../components/ClientForm';
+import { useClient } from '../hooks/UseClient';
 
 export function ClientCreateEdit() {
   const { _id } = useParams();
@@ -14,20 +14,18 @@ export function ClientCreateEdit() {
     } else {
       await saveClient(data);
     }
-    navigate("/Clients");
+    navigate('/Clients');
   };
 
   return (
     <>
       <Layout>
-        <div className="container mt-4">
-          <h2 className="text-center mb-3">
-            {_id ? "Editar cliente" : "Agregar cliente"}
+        <div className='container mt-4'>
+          <h2 className='text-center mb-3'>
+            {_id ? 'Editar cliente' : 'Agregar cliente'}
           </h2>
           {loading ? (
-            <Layout>
-              <div>Cargando cliente...</div>
-            </Layout>
+            <div>Cargando cliente...</div>
           ) : (
             <ClientForm initialData={client} onSubmit={handleSubmit} />
           )}

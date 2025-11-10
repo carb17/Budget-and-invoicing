@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ClientProps } from "../types";
+import { ClientProps } from "../types/types";
 import {
   FetchClient,
   CreateClient,

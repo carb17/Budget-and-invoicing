@@ -1,6 +1,6 @@
 import { USERS_ENDPOINT } from "../../../lib/apiConfig";
 import { InstanciaAxios } from "../../../lib/axios";
-import { LoginProps } from "../types";
+import { LoginProps } from "../types/types";
 
 export const LoginService = async (email: string, password: string) => {
   if (!email || !password) {

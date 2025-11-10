@@ -1,6 +1,6 @@
 import { Button } from "../../../components/common/buttons/Buttons";
 import { useState, useEffect } from "react";
-import { ClientFormProps } from "../types";
+import { ClientFormProps } from "../types/types";
 
 export function ClientForm({ initialData, onSubmit }: ClientFormProps) {
   const [dni, setDNI] = useState("");

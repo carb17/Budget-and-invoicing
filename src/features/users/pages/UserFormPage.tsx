@@ -1,7 +1,7 @@
-import { Layout } from "../../../layout/Layout";
-import { useNavigate, useParams } from "react-router-dom";
-import { UserForm } from "../components/UserForm";
-import { useUsuario } from "../hooks/UseUser";
+import { Layout } from '../../../layout/pages/Layout';
+import { useNavigate, useParams } from 'react-router-dom';
+import { UserForm } from '../components/UserForm';
+import { useUsuario } from '../hooks/UseUser';
 
 export function UserFormPage() {
   const { _id } = useParams();
@@ -10,21 +10,21 @@ export function UserFormPage() {
 
   const handleSubmit = async (data: any) => {
     if (_id) {
-      console.log("ID recibido en UserForm:", _id);
+      console.log('ID recibido en UserForm:', _id);
 
       await saveUser(data);
     } else {
       await saveUser(data);
     }
-    navigate("/Users");
+    navigate('/Users');
   };
 
   return (
     <>
       <Layout>
-        <div className="container mt-4">
-          <h2 className="text-center mb-3">
-            {_id ? "Editar usuario" : "Agregar usuario"}
+        <div className='container mt-4'>
+          <h2 className='text-center mb-3'>
+            {_id ? 'Editar usuario' : 'Agregar usuario'}
           </h2>
           {loading ? (
             <Layout>

@@ -1,9 +1,9 @@
-import { Layout } from "../../layout/Layout";
-import { useClients } from "./hooks/UseClients";
-import { Button } from "../../components/common/buttons/Buttons";
-import { useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEdit } from "@fortawesome/free-solid-svg-icons";
+import { Layout } from '../../layout/pages/Layout';
+import { useClients } from './hooks/UseClients';
+import { Button } from '../../components/common/buttons/Buttons';
+import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
 
 export function Clients() {
   const { clients, loading, error } = useClients();
@@ -31,7 +31,7 @@ export function Clients() {
         <div className="m-3 p-3">
           <div className="d-flex justify-content-end mb-3">
             <Button
-              onClick={() => navigate("/Client")}
+              onClick={() => navigate('/Client')}
               className="btn btn-primary"
               text="Agregar cliente"
             ></Button>

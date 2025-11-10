@@ -1,19 +1,19 @@
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import { Login } from './features/auth/pages/Login';
+import { Home } from './features/home/Home';
+import { Users } from './features/users/pages/UserPage';
+import { RutaPrivada } from './routes/PrivateRoute';
+import { UserFormPage } from './features/users/pages/UserFormPage';
+import { Clients } from './features/clients/ClientPage';
+import { ClientCreateEdit } from './features/clients/pages/ClientCreateEdit';
 
-import { Login } from "./features/auth/pages/Login";
-import { Home } from "./pages/home/Home";
-import { Users } from "./features/users/UserPage";
-import { RutaPrivada } from "./routes/PrivateRoute";
-import { UserFormPage } from "./features/users/pages/UserCreateEdit";
-import { Clients } from "./features/clients/ClientPage";
-import { ClientCreateEdit } from "./features/clients/pages/ClientCreateEdit";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+import './main.css';
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Login />} />

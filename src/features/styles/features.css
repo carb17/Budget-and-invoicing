@@ -1,0 +1,72 @@
+/* ====================
+COMPONENT: LOGIN
+==================== */
+
+.login {
+  margin: 0;
+  padding: 0;
+  max-width: 1920px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.login__container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.login__logo {
+  border-radius: 50%;
+  max-width: 400px;
+}
+
+.login__title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 300px;
+}
+
+.login__input {
+  width: 100%;
+  border: none;
+  padding: 0.4rem 0.8rem;
+}
+
+.login__input--email {
+  border-top-right-radius: 10px;
+}
+
+.login__btn {
+  border: 1px solid #191970;
+  border-bottom-left-radius: 10px;
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  width: 100%;
+}
+
+.login__footer .footer__container {
+  position: static;
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+}
+
+/* ====================
+COMPONENT: HOME
+==================== */
+
+/* =============================
+MEDIA QUERIES
+============================= */

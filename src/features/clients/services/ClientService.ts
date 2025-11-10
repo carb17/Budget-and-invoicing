@@ -1,7 +1,7 @@
 import { InstanciaAxios } from "../../../lib/axios";
 import { CLIENTS_ENDPOINT } from "../../../lib/apiConfig";
 
-import { ClientProps } from "../types";
+import { ClientProps } from "../types/types";
 
 export const FetchClient = async (id: string): Promise<ClientProps> => {
   const response = await InstanciaAxios.get<ClientProps>(

@@ -1,6 +1,6 @@
-import { InstanciaAxios } from "../../../lib/axios";
-import { USERS_ENDPOINT } from "../../../lib/apiConfig";
-import { UserProps } from "../types";
+import { InstanciaAxios } from '../../../lib/axios';
+import { USERS_ENDPOINT } from '../../../lib/apiConfig';
+import { UserProps } from '../types/types';
 
 export const FetchUser = async (id: string): Promise<UserProps> => {
   const response = await InstanciaAxios.get<UserProps>(
