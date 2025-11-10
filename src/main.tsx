@@ -3,12 +3,27 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import { Login } from './features/auth/pages/Login';
-import { Home } from './features/home/Home';
-import { Users } from './features/users/pages/UserPage';
 import { RutaPrivada } from './routes/PrivateRoute';
+
+import { Home } from './features/home/Home';
+
+import { Users } from './features/users/pages/UserPage';
 import { UserFormPage } from './features/users/pages/UserFormPage';
-import { Clients } from './features/clients/pages/ClientPage';
-import { ClientCreateEdit } from './features/clients/pages/ClientCreateEdit';
+
+import { Clients } from './features/clients/pages/ClientListPage';
+import { ClientFormPage } from './features/clients/pages/ClientFormPage';
+
+import { Categories } from './features/categories/pages/CategoryListPage';
+import { CategoryFormPage } from './features/categories/pages/CategoryFormPage';
+
+import { Brands } from './features/brands/pages/BrandListPage';
+import { BrandFormPage } from './features/brands/pages/BrandFormPage';
+
+import { Products } from './features/products/pages/ProductListPage';
+import { ProductFormPage } from './features/products/pages/ProductFormPage';
+
+import { Budgets } from './features/budgets/pages/BudgetListPage';
+import { BudgetFormPage } from './features/budgets/pages/BudgetFormPage';
 
 import './main.css';
 
@@ -64,7 +79,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         path='/Client/'
         element={
           <RutaPrivada>
-            <ClientCreateEdit />
+            <ClientFormPage />
           </RutaPrivada>
         }
       />
@@ -72,7 +87,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         path='/Client/:_id'
         element={
           <RutaPrivada>
-            <ClientCreateEdit />
+            <ClientFormPage />
           </RutaPrivada>
         }
       />
@@ -82,7 +97,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         path='/Categories'
         element={
           <RutaPrivada>
-            <Clients />
+            <Categories />
           </RutaPrivada>
         }
       />
@@ -90,7 +105,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         path='/Category/'
         element={
           <RutaPrivada>
-            <ClientCreateEdit />
+            <CategoryFormPage />
           </RutaPrivada>
         }
       />
@@ -98,7 +113,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         path='/Category/:_id'
         element={
           <RutaPrivada>
-            <ClientCreateEdit />
+            <CategoryFormPage />
           </RutaPrivada>
         }
       />
@@ -108,7 +123,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         path='/Brands'
         element={
           <RutaPrivada>
-            <Clients />
+            <Brands />
           </RutaPrivada>
         }
       />
@@ -116,7 +131,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         path='/Brand/'
         element={
           <RutaPrivada>
-            <ClientCreateEdit />
+            <BrandFormPage />
           </RutaPrivada>
         }
       />
@@ -124,7 +139,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         path='/Brand/:_id'
         element={
           <RutaPrivada>
-            <ClientCreateEdit />
+            <BrandFormPage />
           </RutaPrivada>
         }
       />
@@ -134,7 +149,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         path='/Products'
         element={
           <RutaPrivada>
-            <Clients />
+            <Products />
           </RutaPrivada>
         }
       />
@@ -142,7 +157,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         path='/Product/'
         element={
           <RutaPrivada>
-            <ClientCreateEdit />
+            <ProductFormPage />
           </RutaPrivada>
         }
       />
@@ -150,12 +165,36 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         path='/Product/:_id'
         element={
           <RutaPrivada>
-            <ClientCreateEdit />
+            <ProductFormPage />
           </RutaPrivada>
         }
       />
 
-      {/* ========== USUARIOS ========== */}
+      {/* ========== BUDGETS ========== */}
+      <Route
+        path='/Budgets'
+        element={
+          <RutaPrivada>
+            <Budgets />
+          </RutaPrivada>
+        }
+      />
+      <Route
+        path='/Budget/'
+        element={
+          <RutaPrivada>
+            <BudgetFormPage />
+          </RutaPrivada>
+        }
+      />
+      <Route
+        path='/Budget/:_id'
+        element={
+          <RutaPrivada>
+            <BudgetFormPage />
+          </RutaPrivada>
+        }
+      />
 
       <Route path='/*' element={<Navigate to='/' replace />} />
     </Routes>

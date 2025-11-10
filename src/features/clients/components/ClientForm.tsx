@@ -52,6 +52,7 @@ export function ClientForm({ initialData, onSubmit }: ClientFormProps) {
           onChange={(e) => setName(e.target.value)}
         />
       </div>
+
       <div className=''>
         <label className='clients__label'>Apellido</label>
         <input
@@ -62,6 +63,7 @@ export function ClientForm({ initialData, onSubmit }: ClientFormProps) {
           onChange={(e) => setSurname(e.target.value)}
         />
       </div>
+
       <div className=''>
         <label className='clients__label'>DNI</label>
         <input
@@ -72,6 +74,7 @@ export function ClientForm({ initialData, onSubmit }: ClientFormProps) {
           onChange={(e) => setDNI(Number(e.target.value))}
         />
       </div>
+
       <div className=''>
         <label className='clients__label'>Dirección</label>
         <input
@@ -81,6 +84,7 @@ export function ClientForm({ initialData, onSubmit }: ClientFormProps) {
           onChange={(e) => setAddress(e.target.value)}
         />
       </div>
+
       <div className=''>
         <label className='clients__label'>Número de teléfono</label>
         <input
@@ -90,6 +94,7 @@ export function ClientForm({ initialData, onSubmit }: ClientFormProps) {
           onChange={(e) => setPhone_number(e.target.value)}
         />
       </div>
+
       <div className=''>
         <label className='clients__label'>Estado</label>
         <select

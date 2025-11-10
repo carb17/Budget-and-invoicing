@@ -89,7 +89,7 @@ COMPONENT: USERS
 
 .users__table th,
 .users__table td {
-  padding: 1rem 4rem;
+  padding: 0.5rem 2rem;
   border-bottom: 1px solid #dee2e6;
 }
 
@@ -104,7 +104,7 @@ COMPONENT: USERS
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 800px;
+  max-width: 500px;
   margin: auto;
 }
 
@@ -133,6 +133,11 @@ COMPONENT: USERS
   border: none;
   padding: 0.4rem 0.8rem;
   border-radius: 10px;
+  transform: background-color 0.3s ease;
+}
+
+.users__btn--save:hover {
+  background-color: #199954;
 }
 
 /* ====================
@@ -155,7 +160,7 @@ COMPONENT: CLIENTS
 
 .clients__table th,
 .clients__table td {
-  padding: 1rem 4rem;
+  padding: 0.5rem 2rem;
   border-bottom: 1px solid #dee2e6;
 }
 
@@ -170,7 +175,7 @@ COMPONENT: CLIENTS
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 800px;
+  max-width: 500px;
   margin: auto;
 }
 
@@ -200,7 +205,325 @@ COMPONENT: CLIENTS
   border: none;
   padding: 0.4rem 0.8rem;
   border-radius: 10px;
+  transform: background-color 0.3s ease;
 }
+
+.clients__btn--save:hover {
+  background-color: #199954;
+}
+
+/* ====================
+COMPONENT: CATEGORIES
+==================== */
+.categories {
+  max-width: 1200px;
+  width: 100%;
+  padding: 1rem;
+}
+
+.categories__btn {
+  color: #f0f0f0;
+  background-color: #336699;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.categories__table th,
+.categories__table td {
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.categories__btn--edit {
+  background-color: #ffc107;
+  border: none;
+  padding: 0.4rem;
+  border-radius: 10px;
+}
+
+.categories__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.categories__form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.categories__label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+.categories__input,
+.categories__select {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+}
+
+.categories__btn--save {
+  width: 100%;
+  background-color: #198754;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  transform: background-color 0.3s ease;
+}
+
+.categories__btn--save:hover {
+  background-color: #199954;
+}
+
+/* ====================
+COMPONENT: BRANDS
+==================== */
+.brands {
+  max-width: 1200px;
+  width: 100%;
+  padding: 1rem;
+}
+
+.brands__btn {
+  color: #f0f0f0;
+  background-color: #336699;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.brands__table th,
+.brands__table td {
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.brands__btn--edit {
+  background-color: #ffc107;
+  border: none;
+  padding: 0.4rem;
+  border-radius: 10px;
+}
+
+.brands__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.brands__form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.brands__label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+.brands__input,
+.brands__select {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+}
+
+.brands__btn--save {
+  width: 100%;
+  background-color: #198754;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  transform: background-color 0.3s ease;
+}
+
+.brands__btn--save:hover {
+  background-color: #199954;
+}
+
+/* ====================
+COMPONENT: PRODUCTS
+==================== */
+.products {
+  max-width: 1200px;
+  width: 100%;
+  padding: 1rem;
+}
+
+.products__btn {
+  color: #f0f0f0;
+  background-color: #336699;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.products__table th {
+  text-align: center;
+}
+
+.products__table th,
+.products__table td {
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.products__btn--edit {
+  background-color: #ffc107;
+  border: none;
+  padding: 0.4rem;
+  border-radius: 10px;
+}
+
+.products__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.products__form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.products__label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+.products__input,
+.products__select {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+}
+
+.products__btn--save {
+  width: 100%;
+  background-color: #198754;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+}
+
+.products__btn--save {
+  width: 100%;
+  background-color: #198754;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  transform: background-color 0.3s ease;
+}
+
+.products__btn--save:hover {
+  background-color: #199954;
+}
+
+/* ====================
+COMPONENT: BUDGETS
+==================== */
+.budgets {
+  max-width: 1200px;
+  width: 100%;
+  padding: 1rem;
+}
+
+.budgets__btn {
+  color: #f0f0f0;
+  background-color: #336699;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.budgets__table th {
+  text-align: center;
+}
+
+.budgets__table th,
+.budgets__table td {
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.budgets__btn--edit {
+  background-color: #ffc107;
+  border: none;
+  padding: 0.4rem;
+  border-radius: 10px;
+}
+
+.budgets__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.budgets__form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.budgets__label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+.budgets__input,
+.budgets__select {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+}
+
+.budgets__btn--save {
+  width: 100%;
+  background-color: #198754;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+}
+
+.budgets__btn--save {
+  width: 100%;
+  background-color: #198754;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  transform: background-color 0.3s ease;
+}
+
+.budgets__btn--save:hover {
+  background-color: #199954;
+}
+
 /* =============================
 MEDIA QUERIES
 ============================= */

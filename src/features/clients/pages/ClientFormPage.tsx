@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { ClientForm } from '../components/ClientForm';
 import { useClient } from '../hooks/UseClient';
 
-export function ClientCreateEdit() {
+export function ClientFormPage() {
   const { _id } = useParams();
   const navigate = useNavigate();
   const { client, saveClient, loading } = useClient(_id);

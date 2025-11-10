@@ -27,13 +27,18 @@ export function Navbar() {
             <FontAwesomeIcon className='navbar__icon' icon={faUsers} /> Clientes
           </NavLink>
 
-          <NavLink className='navbar__item' to='/Products'>
+          <NavLink className='navbar__item' to='/Categories'>
             <FontAwesomeIcon className='navbar__icon' icon={faWrench} />{' '}
-            Productos
+            Categorias
           </NavLink>
 
           <NavLink className='navbar__item' to='/Brands'>
             <FontAwesomeIcon className='navbar__icon' icon={faFlag} /> Marcas
+          </NavLink>
+
+          <NavLink className='navbar__item' to='/Products'>
+            <FontAwesomeIcon className='navbar__icon' icon={faWrench} />{' '}
+            Productos
           </NavLink>
 
           <NavLink className='navbar__item' to='/Budgets'>
