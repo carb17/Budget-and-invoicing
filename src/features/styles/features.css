@@ -73,8 +73,8 @@ COMPONENT: HOME
 COMPONENT: USERS
 ==================== */
 .users {
-  max-width: 1200px;
-  width: 100%;
+  max-width: 1920px;
+  width: auto;
   padding: 1rem;
 }
 
@@ -144,8 +144,8 @@ COMPONENT: USERS
 COMPONENT: CLIENTS
 ==================== */
 .clients {
-  max-width: 1200px;
-  width: 100%;
+  max-width: 1920px;
+  width: auto;
   padding: 1rem;
 }
 
@@ -216,8 +216,8 @@ COMPONENT: CLIENTS
 COMPONENT: CATEGORIES
 ==================== */
 .categories {
-  max-width: 1200px;
-  width: 100%;
+  max-width: 1920px;
+  width: auto;
   padding: 1rem;
 }
 
@@ -288,8 +288,8 @@ COMPONENT: CATEGORIES
 COMPONENT: BRANDS
 ==================== */
 .brands {
-  max-width: 1200px;
-  width: 100%;
+  max-width: 19200px;
+  width: auto;
   padding: 1rem;
 }
 
@@ -360,8 +360,8 @@ COMPONENT: BRANDS
 COMPONENT: PRODUCTS
 ==================== */
 .products {
-  max-width: 1200px;
-  width: 100%;
+  max-width: 1920px;
+  width: auto;
   padding: 1rem;
 }
 
@@ -444,8 +444,8 @@ COMPONENT: PRODUCTS
 COMPONENT: BUDGETS
 ==================== */
 .budgets {
-  max-width: 1200px;
-  width: 100%;
+  max-width: 1920px;
+  width: auto;
   padding: 1rem;
 }
 
@@ -468,11 +468,34 @@ COMPONENT: BUDGETS
   border-bottom: 1px solid #dee2e6;
 }
 
-.budgets__btn--edit {
-  background-color: #ffc107;
+.budgets__btn--edit,
+.budgets__btn--see,
+.budgets__btn--status,
+.budgets__btn--invoice {
   border: none;
   padding: 0.4rem;
   border-radius: 10px;
+}
+
+.budgets__btn--edit {
+  background-color: #ffc107;
+}
+
+.budgets__btn--see {
+  background-color: #336699;
+}
+
+.budgets__btn--status {
+  background-color: #6c757d;
+}
+
+.budgets__btn--invoice {
+  background-color: #198754;
+  transition: background-color 0.3s ease;
+}
+
+.budgets__btn--invoice:hover {
+  background-color: #199954;
 }
 
 .budgets__form {

@@ -55,7 +55,7 @@ export function Navbar() {
           </NavLink>
 
           <hr className='navbar__divider' />
-          <NavLink className='navbar__item' to='/NewBudget'>
+          <NavLink className='navbar__item' to='/Budget'>
             <FontAwesomeIcon className='navbar__icon' icon={faPlus} /> Nuevo
             presupuesto
           </NavLink>
