@@ -5,10 +5,10 @@ import { Button } from '../../../components/common/buttons/Buttons';
 import { useNavigate } from 'react-router-dom';
 
 import { useProducts } from '../hooks/UseProducts';
-
-import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { useCategories } from '../../categories/hooks/UseCategories';
 import { useBrands } from '../../brands/hooks/UseBrands';
+
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
 
 export function Products() {
   const { products, loading, error } = useProducts();
